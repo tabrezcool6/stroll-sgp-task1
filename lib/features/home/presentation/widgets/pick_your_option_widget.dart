@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:stroll_app/config/image_path.dart';
+import 'package:stroll_app/config/text_styles.dart';
 
 class PickYourOptionWidget extends StatelessWidget {
   const PickYourOptionWidget({
@@ -14,15 +15,9 @@ class PickYourOptionWidget extends StatelessWidget {
       child: Row(
         children: [
           const SizedBox(width: 6.0),
-          const Text(
+          Text(
             "Pick your option.\nSee who has a similar mind.",
-            style: TextStyle(
-              fontFamily: 'ProximaNova',
-              fontSize: 12.0,
-              fontWeight: FontWeight.w400,
-              height: 1.2,
-              color: Color(0xFFE5E5E5),
-            ),
+            style: TextStyles.styleProxima(height: 1.2),
           ),
           const Spacer(),
           SvgPicture.asset(SVGPaths.POLL_MIC),

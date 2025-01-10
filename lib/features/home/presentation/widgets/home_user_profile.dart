@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:stroll_app/config/app_pallet.dart';
 import 'package:stroll_app/config/image_path.dart';
+import 'package:stroll_app/config/text_styles.dart';
 
 class HomeUserPofileWidget extends StatelessWidget {
   const HomeUserPofileWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
+    return Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CircleAvatar(
+        const CircleAvatar(
           radius: 25,
           backgroundImage: AssetImage(ImagePath.joey_BG),
         ),
-        SizedBox(width: 8.0),
+        const SizedBox(width: 8.0),
         Expanded(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -22,23 +23,15 @@ class HomeUserPofileWidget extends StatelessWidget {
             children: [
               Text(
                 'Angelina, 28',
-                style: TextStyle(
-                  fontFamily: 'ProximaNova',
-                  fontSize: 12.0,
-                  fontWeight: FontWeight.w700,
-                  // height: 14.4,
-                  color: AppPallet.ANSWER_OPTIONS_TEXT,
-                ),
+                style: TextStyles.styleProxima(weight: FontWeight.w700),
               ),
               const SizedBox(height: 4.0),
               Text(
-                'What is your favorite time of the day? favorite time of the day?',
-                style: TextStyle(
-                  fontFamily: 'ProximaNova',
+                'What is your favorite time of the day?',
+                style: TextStyles.styleProxima(
                   fontSize: 20.0,
-                  fontWeight: FontWeight.w700,
+                  weight: FontWeight.w700,
                   height: 1.1,
-                  color: AppPallet.ANSWER_OPTIONS_TEXT,
                 ),
               ),
             ],

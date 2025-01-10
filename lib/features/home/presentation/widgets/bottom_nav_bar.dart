@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:stroll_app/config/app_pallet.dart';
@@ -27,18 +26,19 @@ class BottomNavBar extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
+                /// Child 1
+                SizedBox(
                   height: 44,
                   width: 44,
                   child: SvgPicture.asset(
                     SVGPaths.BOTTOM_NAV_CARD,
                   ),
                 ),
-    
-                ///
+
+                /// Child 2
                 Stack(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 44,
                       width: 44,
                       child: Padding(
@@ -49,7 +49,7 @@ class BottomNavBar extends StatelessWidget {
                         ),
                       ),
                     ),
-    
+
                     ///
                     Positioned(
                       top: 5.0,
@@ -63,11 +63,11 @@ class BottomNavBar extends StatelessWidget {
                     )
                   ],
                 ),
-    
-                ///
+
+                /// Child 3
                 Stack(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 44,
                       width: 44,
                       child: Padding(
@@ -78,7 +78,7 @@ class BottomNavBar extends StatelessWidget {
                         ),
                       ),
                     ),
-    
+
                     ///
                     Positioned(
                       top: 5.0,
@@ -101,18 +101,16 @@ class BottomNavBar extends StatelessWidget {
                     )
                   ],
                 ),
-    
-                ///
-                Container(
-                  child: SvgPicture.asset(
-                    SVGPaths.BOTTOM_NAV_USER,
-                  ),
+
+                /// Child 4
+                SvgPicture.asset(
+                  SVGPaths.BOTTOM_NAV_USER,
                 ),
               ],
             ),
           ),
-    
-          ///
+
+          /// Home Indicator
           Container(
             margin: const EdgeInsets.only(top: 21.0, bottom: 12.0),
             width: 135,
@@ -122,7 +120,7 @@ class BottomNavBar extends StatelessWidget {
               borderRadius: BorderRadius.circular(100.0),
             ),
           )
-    
+
           ///
         ],
       ),

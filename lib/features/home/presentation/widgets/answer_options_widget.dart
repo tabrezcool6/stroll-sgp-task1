@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:stroll_app/config/app_pallet.dart';
+import 'package:stroll_app/config/text_styles.dart';
 
+///
+///
 /// Single Option Widget
 class AnswerOptionsWidget extends StatelessWidget {
   final String optionLetter;
@@ -42,13 +45,7 @@ class AnswerOptionsWidget extends StatelessWidget {
                 ),
                 Text(
                   optionLetter,
-                  style: const TextStyle(
-                    fontFamily: 'ProximaNova',
-                    fontSize: 12.0,
-                    fontWeight: FontWeight.w400,
-                    color: AppPallet.ANSWER_OPTIONS_TEXT,
-                    // height: 14.4,
-                  ),
+                  style: TextStyles.styleProxima(),
                 ),
               ],
             ),
@@ -56,13 +53,7 @@ class AnswerOptionsWidget extends StatelessWidget {
             Expanded(
               child: Text(
                 optionText,
-                style: const TextStyle(
-                  fontFamily: 'ProximaNova',
-                  fontSize: 14.0,
-                  fontWeight: FontWeight.w400,
-                  color: AppPallet.ANSWER_OPTIONS_TEXT,
-                  height: 1.2,
-                ),
+                style: TextStyles.styleProxima(fontSize: 14.0, height: 1.2),
               ),
             ),
           ],
@@ -72,6 +63,8 @@ class AnswerOptionsWidget extends StatelessWidget {
   }
 }
 
+///
+///
 /// All Options Widget
 class AllOptionsWidget extends StatelessWidget {
   const AllOptionsWidget({super.key});
@@ -86,11 +79,14 @@ class AllOptionsWidget extends StatelessWidget {
         Row(
           children: [
             AnswerOptionsWidget(
-                optionLetter: 'A',
-                optionText: 'The peace in the early mornings'),
+              optionLetter: 'A',
+              optionText: 'The peace in the early mornings',
+            ),
             SizedBox(width: 14.0),
             AnswerOptionsWidget(
-                optionLetter: 'B', optionText: 'The magical golden hours'),
+              optionLetter: 'B',
+              optionText: 'The magical golden hours',
+            ),
           ],
         ),
 
@@ -99,7 +95,9 @@ class AllOptionsWidget extends StatelessWidget {
         Row(
           children: [
             AnswerOptionsWidget(
-                optionLetter: 'C', optionText: 'Wind-down time after dinners'),
+              optionLetter: 'C',
+              optionText: 'Wind-down time after dinners',
+            ),
             SizedBox(width: 14.0),
             AnswerOptionsWidget(
               optionLetter: 'D',

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:stroll_app/config/app_pallet.dart';
+import 'package:stroll_app/config/text_styles.dart';
 
 class AnswerTaglineWidget extends StatelessWidget {
   const AnswerTaglineWidget({
@@ -15,12 +16,8 @@ class AnswerTaglineWidget extends StatelessWidget {
           alignment: Alignment.center,
           child: Text(
             '“Mine is definitely the peace in the morning.”',
-            style: TextStyle(
-              fontFamily: 'ProximaNova',
-              fontSize: 12.0,
-              fontWeight: FontWeight.w400,
+            style: TextStyles.styleProxima(
               fontStyle: FontStyle.italic,
-              // height: 14.4,
               color: AppPallet.ITALIC_ANSWER_TEXT,
             ),
           ),

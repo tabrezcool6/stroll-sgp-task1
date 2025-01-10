@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:stroll_app/config/app_pallet.dart';
 import 'package:stroll_app/config/image_path.dart';
 import 'package:stroll_app/features/home/presentation/widgets/answer_options_widget.dart';
@@ -9,9 +8,14 @@ import 'package:stroll_app/features/home/presentation/widgets/home_title_widget.
 import 'package:stroll_app/features/home/presentation/widgets/home_user_profile.dart';
 import 'package:stroll_app/features/home/presentation/widgets/pick_your_option_widget.dart';
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,10 +38,11 @@ class MyHomePage extends StatelessWidget {
           Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(
-                  stops: [0.0, 0.3],
-                  begin: Alignment.center,
-                  end: Alignment.bottomCenter,
-                  colors: [Colors.transparent, Colors.black]),
+                stops: [0.0, 0.3],
+                begin: Alignment.center,
+                end: Alignment.bottomCenter,
+                colors: [Colors.transparent, Colors.black],
+              ),
             ),
           ),
 
