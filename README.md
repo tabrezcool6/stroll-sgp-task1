@@ -29,4 +29,4 @@ Fell free to contact in case of any changes need to be done.
 
 In Pixel 4 XL                                   |  In OnePlus Nord CE 3 Lite                                
 :-------------------------:                     |:-------------------------:                  
-![alt text](<output/output_in_pixel_4xl.png>)   |![alt text](<output_in_oneplus_nord.jpg>)   
+![alt text](<output/output_in_pixel_4xl.png>)   |![alt text](<output/output_in_oneplus_nord.jpg>)   
